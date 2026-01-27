@@ -187,3 +187,40 @@ Quá trình xử lý một yêu cầu diễn ra như sau:
 ```
 
 ```
+
+1. Tìm hiểu về ViewBag trong MVC
+ViewBag là một đối tượng động (dynamic object) được sử dụng để truyền dữ liệu từ Controller sang View.
+
+Đặc điểm: Nó cho phép bạn thêm các thuộc tính tùy ý vào đối tượng mà không cần định nghĩa trước (ví dụ: ViewBag.Title, ViewBag.MyData).
+
+Phạm vi: Dữ liệu trong ViewBag chỉ tồn tại trong suốt quá trình xử lý Request hiện tại. Nếu có một lệnh chuyển hướng (Redirect), dữ liệu trong ViewBag sẽ bị xóa sạch.
+
+Cú pháp:
+
+Trong Controller: ViewBag.PropertyName = value;
+
+Trong View (Razor): @ViewBag.PropertyName
+Chào bạn! Rất vui được đồng hành cùng bạn trong lộ trình chinh phục ASP.NET MVC. Dưới đây là hướng dẫn chi tiết cho các nội dung bạn yêu cầu để nắm vững luồng xử lý dữ liệu trong MVC.
+
+1. Tìm hiểu về ViewBag trong MVC
+ViewBag là một đối tượng động (dynamic object) được sử dụng để truyền dữ liệu từ Controller sang View.
+
+Đặc điểm: Nó cho phép bạn thêm các thuộc tính tùy ý vào đối tượng mà không cần định nghĩa trước (ví dụ: ViewBag.Title, ViewBag.MyData).
+
+Phạm vi: Dữ liệu trong ViewBag chỉ tồn tại trong suốt quá trình xử lý Request hiện tại. Nếu có một lệnh chuyển hướng (Redirect), dữ liệu trong ViewBag sẽ bị xóa sạch.
+
+Cú pháp:
+
+Trong Controller: ViewBag.PropertyName = value;
+
+Trong View (Razor): @ViewBag.PropertyName
+
+
+<h2>Thông báo: @ViewBag.WelcomeMessage</h2>
+<p>Bây giờ là: @ViewBag.CurrentTime</p>
+3. Gửi nhận dữ liệu qua Form Submit
+Trong MVC, quá trình gửi nhận dữ liệu qua Form thường diễn ra như sau:
+
+View: Chứa thẻ <form> với phương thức method="post". Các ô nhập liệu (<input>) phải có thuộc tính name trùng với tên tham số hoặc thuộc tính trong Model.
+
+Controller: Sử dụng Action được đánh dấu thuộc tính [HttpPost] để nhận dữ liệu khi người dùng nhấn nút Submit.

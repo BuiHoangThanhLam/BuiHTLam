@@ -1,0 +1,13 @@
+@model DemoMVC.Models.Student
+
+<form method="post">
+    <div>
+        Mã sinh viên: <input type="text" name="StudentCode" />
+    </div>
+    <div>
+        Họ tên: <input type="text" name="FullName" />
+    </div>
+    <button type="submit">Lưu sinh viên</button>
+</form>
+
+<p>@ViewBag.Info</p>
