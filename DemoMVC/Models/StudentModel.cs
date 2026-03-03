@@ -1,7 +1,13 @@
-namespace DemoMVC.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-public class Student()
+namespace DemoMVC.Models
 {
-    public string StudentCode {get; set;}
-    public string FullName {get; set; }
+    [Table("Student")]
+    public class Student()
+    {
+        [Key]
+        public string StudentCode {get; set;} = default!;
+        public string? FullName {get; set; }
+    }
 }
