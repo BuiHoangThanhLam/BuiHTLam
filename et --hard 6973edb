@@ -1,0 +1,29 @@
+[33mdb3404c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit: BTH so 6
+[33m5d541e3[m HEAD@{1}: reset: moving to HEAD~2
+[33m995b3cd[m HEAD@{2}: commit: BTH so 6
+[33m6973edb[m HEAD@{3}: reset: moving to HEAD~2
+[33md12f95f[m HEAD@{4}: commit: update
+[33mb5c3bac[m HEAD@{5}: commit: BTH so 6
+[33m6973edb[m HEAD@{6}: commit: BTH so 5
+[33m5d541e3[m HEAD@{7}: commit: BaiThucHanhSo4
+[33m7657356[m HEAD@{8}: commit: BTH 03
+[33meb7941d[m HEAD@{9}: reset: moving to HEAD~2
+[33m879abc7[m HEAD@{10}: commit: BTH 03
+[33m8c3076b[m HEAD@{11}: commit: BTH 03
+[33meb7941d[m HEAD@{12}: reset: moving to HEAD~5
+[33me273aaa[m HEAD@{13}: commit: BTH 03
+[33m3a12a7a[m HEAD@{14}: commit: BTH 03
+[33mb64ea95[m HEAD@{15}: commit: BTH 03
+[33m2de8473[m HEAD@{16}: commit: BTH 03
+[33mb02055e[m HEAD@{17}: commit: BTH 03
+[33meb7941d[m HEAD@{18}: commit: BTH HTML and CSS
+[33m9abaa20[m HEAD@{19}: reset: moving to HEAD~2
+[33mc860dcc[m HEAD@{20}: commit: BTH HTML and CSS
+[33m038bd72[m HEAD@{21}: commit: BTH HTML and CSS
+[33m9abaa20[m HEAD@{22}: reset: moving to HEAD~4
+[33mba94e05[m HEAD@{23}: commit: BTH02
+[33m4d09b95[m HEAD@{24}: commit: btth02
+[33m63b18e0[m HEAD@{25}: commit: CreateProject
+[33m6cb5f16[m HEAD@{26}: commit: CreateProject
+[33m9abaa20[m HEAD@{27}: Branch: renamed refs/heads/main to refs/heads/main
+[33m9abaa20[m HEAD@{29}: commit (initial): first commit

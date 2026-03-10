@@ -9,4 +9,6 @@ namespace DemoMVC.Data
         {}
         public DbSet<Student> Student { get; set; }
     }
+    
+    
 }
