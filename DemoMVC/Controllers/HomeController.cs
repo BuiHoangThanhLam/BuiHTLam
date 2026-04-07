@@ -15,7 +15,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Index(string FullName)
     {
-        ViewBag.Message = "Xin chào" + FullName;
+        ViewBag.Message = "Xin chào " + FullName;
         return View();
     }
     public IActionResult Privacy()

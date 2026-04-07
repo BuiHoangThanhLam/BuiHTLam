@@ -1,17 +1,31 @@
 @model DemoMVC.Models.Student
 
-<h2>Delete Student</h2>
-
-<p>Are you sure you want to delete this student?</p>
-
-<p>@Model.FullName</p>
-
-<form asp-action="DeleteConfirmed" method="post">
-
-    <input type="hidden" asp-for="Id"/>
-
-    <button type="submit">Delete</button>
-
-    <a asp-action="Index">Cancel</a>
-
-</form>
+<h2 class="mb-4 text-danger">Delete Student</h2>
+<div class="card shadow p-4">
+    <div class="alert alert-danger">
+        <strong>Warning!</strong> Are you sure you want to delete this student?
+    </div>
+    <dl class="row">
+        <dt class="col-sm-3">
+            Student Code
+        </dt>
+        <dd class="col-sm-9">
+            <strong>@Model.StudentCode</strong>
+        </dd>
+        <dt class="col-sm-3">
+            Full Name
+        </dt>
+        <dd class="col-sm-9">
+            @Model.FullName
+        </dd>
+    </dl>
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id"/>
+        <button type="submit" class="btn btn-danger">
+            Delete
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancel
+        </a>
+    </form>
+</div>

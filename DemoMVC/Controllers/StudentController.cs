@@ -29,6 +29,11 @@ namespace DemoMVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                 if (_context.Student.Any(s => s.StudentCode == std.StudentCode))
+                {
+                    ModelState.AddModelError("StudentCode", "Student Code already exists");
+                    return View(std);
+                }
                 _context.Student.Add(std);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
@@ -38,11 +43,15 @@ namespace DemoMVC.Controllers
         public IActionResult Edit(int Id)
         {
             var student = _context.Student.Find(Id);
+            if (student == null)
+            {
+                return RedirectToAction("NotFoundPage");
+            }
             return View(student);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Student std)
+        public IActionResult Edit(int Id, Student std)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +64,10 @@ namespace DemoMVC.Controllers
         public IActionResult Delete(int Id)
         {
             var student = _context.Student.Find(Id);
+            if (student == null)
+            {
+                return RedirectToAction("NotFoundPage");
+            }
             return View(student);
         }
         [HttpPost]
@@ -69,6 +82,9 @@ namespace DemoMVC.Controllers
             }
             return RedirectToAction("Index");
         }
-  
+        public IActionResult NotFoundPage()
+        {
+            return View("NotFound");
+        }
     }
 }
