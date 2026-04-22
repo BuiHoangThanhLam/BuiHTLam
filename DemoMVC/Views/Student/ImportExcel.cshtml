@@ -1,0 +1,29 @@
+@model DemoMVC.Models.ViewModels.ExcelUploadViewModel
+
+@{
+    ViewData["Title"] = "Import Student";
+}
+
+<h2>Import Student từ Excel</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @Html.Raw(TempData["Error"])
+    </div>
+}
+
+@await Html.PartialAsync("~/Views/Shared/_ExcelUploadForm.cshtml", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,66 @@
+@model DemoMVC.Models.Customer
+
+@{
+    ViewData["Title"] = "Lịch sử mua hàng";
+}
+
+<h2>Lịch sử mua hàng của @Model.FullName</h2>
+
+<p>
+    <strong>Email:</strong> @Model.Email <br />
+    <strong>Số điện thoại:</strong> @Model.Phone <br />
+    <strong>Địa chỉ:</strong> @Model.Address
+</p>
+
+@if (Model.Orders == null || !Model.Orders.Any())
+{
+    <div class="alert alert-warning">
+        Khách hàng này chưa có đơn hàng nào.
+    </div>
+}
+else
+{
+    @foreach (var order in Model.Orders.OrderByDescending(o => o.OrderDate))
+    {
+        var total = order.OrderDetails.Sum(x => x.Quantity * x.UnitPrice);
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <strong>Đơn hàng #@order.OrderId</strong> |
+                Ngày đặt: @order.OrderDate.ToString("dd/MM/yyyy HH:mm") |
+                Trạng thái: @order.Status
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in order.OrderDetails)
+                        {
+                            <tr>
+                                <td>@item.Product?.ProductName</td>
+                                <td>@item.UnitPrice.ToString("N0")</td>
+                                <td>@item.Quantity</td>
+                                <td>@((item.Quantity * item.UnitPrice).ToString("N0"))</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" class="text-end">Tổng cộng</th>
+                            <th>@total.ToString("N0")</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    }
+}
+
+<a asp-action="Index" class="btn btn-secondary">Quay lại</a>

@@ -4,6 +4,8 @@ using DemoMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DemoMVC.Models.ViewModels;
+using ClosedXML.Excel;
+using DemoMVC.Services.Excel;
 
 
 namespace DemoMVC.Controllers 
@@ -11,9 +13,47 @@ namespace DemoMVC.Controllers
     public class StudentController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public StudentController(ApplicationDbContext context)
+        private readonly IExcelImportService _excelImportService;
+
+        public StudentController(
+            ApplicationDbContext context,
+            IExcelImportService excelImportService)
         {
             _context = context;
+            _excelImportService = excelImportService;
+        }
+        [HttpGet]
+        public IActionResult ImportExcel()
+        {
+            return View(new ExcelUploadViewModel());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ImportExcel(
+            ExcelUploadViewModel model,
+            CancellationToken cancellationToken)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var result = await _excelImportService.ImportAsync<Student>(
+                model.ExcelFile,
+                new ExcelImportOptions
+                {
+                    RequiredColumns = new List<string> { "StudentCode", "FullName", "Email", "Age", "FacultyId"},
+                    BatchSize = 200
+                },
+                cancellationToken);
+
+            TempData["Success"] = $"Import thành công {result.SuccessRows}/{result.TotalRows} dòng.";
+
+            if (result.HasErrors)
+            {
+                TempData["Error"] = string.Join("<br/>", result.Errors.Take(20));
+            }
+
+            return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Index()
         {
@@ -108,9 +148,10 @@ namespace DemoMVC.Controllers
             }
             return RedirectToAction("Index");
         }
-        public IActionResult NotFoundPage()
+        public IActionResult NotFoundPage()      
         {
             return View("NotFound");
         }
+ 
     }
 }

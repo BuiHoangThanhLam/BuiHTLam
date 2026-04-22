@@ -1,0 +1,12 @@
+@model DemoMVC.Models.ViewModels.ExcelUploadViewModel
+
+<form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label asp-for="ExcelFile" class="form-label"></label>
+        <input asp-for="ExcelFile" type="file" class="form-control" accept=".xlsx" />
+        <span asp-validation-for="ExcelFile" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Import Excel</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

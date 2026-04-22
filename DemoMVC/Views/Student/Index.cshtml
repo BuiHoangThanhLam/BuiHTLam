@@ -2,9 +2,11 @@
     ViewData["Title"] = "Student Page";
 }
 @model IEnumerable<DemoMVC.Models.ViewModels.StudentVM>
-
 <h2 class="mb-4">Student List</h2>
-<a asp-action="Create" class="btn btn-primary mb-3">+ Add Student</a>
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-primary ">+ Add Student</a>
+    <a asp-action="ImportExcel" class="btn btn-success ms-2">Import Excel</a>
+</div>
 <table class="table table-bordered table-hover table-striped">
     <thead class="table-dark">
         <tr>
