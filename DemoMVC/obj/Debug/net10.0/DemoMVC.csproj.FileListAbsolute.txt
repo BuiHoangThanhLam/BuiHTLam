@@ -373,3 +373,9 @@ C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\bin\Debug\net10.0\ExcelNumber
 C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\bin\Debug\net10.0\RBush.dll
 C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\bin\Debug\net10.0\SixLabors.Fonts.dll
 C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\bin\Debug\net10.0\System.IO.Packaging.dll
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\bin\Debug\net10.0\Bogus.dll
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\l0wmgqstnq-{0}-xkqvayhjsu-xkqvayhjsu.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\cvjddl1fwo-{0}-13l9rpkm0i-13l9rpkm0i.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\ubvoab4fuj-{0}-f1ylcx401p-f1ylcx401p.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\tex1udfh7s-{0}-cyufyooezn-cyufyooezn.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\a2vlw5jbxz-{0}-sxdgj04hx6-sxdgj04hx6.gz
