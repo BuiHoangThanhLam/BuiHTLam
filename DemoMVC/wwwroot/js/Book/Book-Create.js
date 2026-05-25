@@ -4,7 +4,7 @@
 $(document).on('click', '#btnAddBook', function () {
 
     $.ajax({
-
+        
         url: '/Book/Create',
 
         type: 'GET',

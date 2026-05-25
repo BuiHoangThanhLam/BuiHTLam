@@ -1,0 +1,62 @@
+@model DemoMVC.Models.HocSinh
+
+<div class="modal fade" id="createHocSinhModal" tabindex="-1" aria-labelledby="createHocSinhModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <form id="createHocSinhForm" asp-controller="HocSinh" asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createHocSinhModalLabel">
+                        Thêm mới học sinh
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="FullName" class="form-label">
+                                Họ và tên
+                            </label>
+                            <input asp-for="FullName" class="form-control" placeholder="Enter họ và tên" />
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Email" class="form-label">
+                                Email
+                            </label>
+                            <input asp-for="Email" class="form-control" placeholder="Enter email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="Age" class="form-label">
+                                Tuổi
+                            </label>
+                            <input asp-for="Age" type="number" class="form-control" />
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Đóng
+                    </button>
+
+                    <button type="submit" class="btn btn-primary">
+                        Lưu thông tin học sinh
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

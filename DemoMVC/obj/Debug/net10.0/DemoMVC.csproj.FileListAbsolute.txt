@@ -376,6 +376,11 @@ C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\bin\Debug\net10.0\System.IO.P
 C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\bin\Debug\net10.0\Bogus.dll
 C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\l0wmgqstnq-{0}-xkqvayhjsu-xkqvayhjsu.gz
 C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\cvjddl1fwo-{0}-13l9rpkm0i-13l9rpkm0i.gz
-C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\ubvoab4fuj-{0}-f1ylcx401p-f1ylcx401p.gz
 C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\tex1udfh7s-{0}-cyufyooezn-cyufyooezn.gz
 C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\a2vlw5jbxz-{0}-sxdgj04hx6-sxdgj04hx6.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\qeir2k94hd-{0}-1kb8l1a7h1-1kb8l1a7h1.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\wexzsclz8e-{0}-3dgppxgc4i-3dgppxgc4i.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\xfut7d3a88-{0}-ran4fzgtb8-ran4fzgtb8.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\amehxxa7oc-{0}-berqehfjel-berqehfjel.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\ubvoab4fuj-{0}-tw6y5hecfz-tw6y5hecfz.gz
+C:\TLHT\BuiHoangThanhLam_2221050435_PTPMQL\DemoMVC\obj\Debug\net10.0\compressed\pcz3djra0x-{0}-pov4yoso8f-pov4yoso8f.gz

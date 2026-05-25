@@ -1,0 +1,75 @@
+@model DemoMVC.Models.HocSinh
+
+
+<div class="modal fade" id="editHocSinhModal" tabindex="-1" aria-labelledby="editHocSinhModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="editHocSinhModalLabel">
+                    Edit HocSinh
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <!-- Form -->
+            <form id="editHocSinhForm">
+                @Html.AntiForgeryToken()
+                <input asp-for="Id" type="hidden" />
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- ISBN -->
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                Mã sinh viên
+                            </label>
+                            <input asp-for="StudentCode" class="form-control" placeholder="Enter Mã dinh viên" />
+                            <span asp-validation-for="StudentCode" class="text-danger">
+                            </span>
+                        </div>
+                        <!-- Title -->
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                Họ và tên
+                            </label>
+                            <input asp-for="FullName" class="form-control" placeholder="Enter Họ và tên" />
+                            <span asp-validation-for="FullName" class="text-danger">
+                            </span>
+                        </div>
+                        <!-- Author -->
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                Email
+                            </label>
+                            <input asp-for="Email" class="form-control" placeholder="Enter email" />
+                            <span asp-validation-for="Email" class="text-danger">
+                            </span>
+                        </div>
+                        <!-- Publisher -->
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                Tuổi
+                            </label>
+                            <input asp-for="Age" class="form-control" placeholder="Enter Tuổi" />
+                            <span asp-validation-for="Age" class="text-danger">
+                            </span>
+                        </div>
+                       
+                    </div>
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Update học sinh
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

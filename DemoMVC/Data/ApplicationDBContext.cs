@@ -23,6 +23,7 @@ namespace DemoMVC.Data
         public DbSet<ExportReceipt> ExportReceipts { get; set; }
         public DbSet<ExportReceiptDetail> ExportReceiptDetails { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<HocSinh> HocSinh { get; set; }
     }
     
     
